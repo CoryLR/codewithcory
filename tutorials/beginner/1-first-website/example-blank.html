@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Showcase Example</h1>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, delectus consequatur rem eaque sunt adipisci
+    optio fugit doloremque, exercitationem tempore beatae magni! Iure harum, architecto officiis non laudantium aliquid
+    amet?</p>
+
+  <img class="example-image">
+
+  <p>Lorem ipsum dolor sit amet consectetur:</p>
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+    <li>Lorem ipsum dolor sit amet consectetur</li>
+  </ul>
+
+</body>
+
+<style>
+  body {
+    font-family: 'Arial';
+    padding: 5% 10%;
+  }
+
+  img.example-image {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    background-color: lightgray;
+    cursor: pointer;
+  }
+
+  img.expanded {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+  }
+
+  @media (max-width: 700px) {
+    img.example-image {
+      max-width: 100%;
+    }
+  }
+
+</style>
+
+<script>
+  const exampleImage = document.querySelector('.example-image');
+  exampleImage.addEventListener('click', expandImage);
+
+  function expandImage() {
+    exampleImage.classList.toggle('expanded');
+  }
+</script>
+
+</html>
