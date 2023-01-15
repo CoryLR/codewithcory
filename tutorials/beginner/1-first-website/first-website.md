@@ -456,9 +456,9 @@ This rule will change the text font of all text font-face to Arial.
 
 ✨ Key Concept: CSS **Classes** ✨
 
-Let's say you have *multiple* `section` tags but you want to change the way just *one* of them looks without changing *all* the `section` elements. This is where CSS **classes** come to the rescue.
+Let's say you have five `section` tags but you want to change the style of just *one or two* specific ones without changing *all* them. This is where CSS **classes** come to the rescue. A CSS class is a way to identify specific HTML elements regardless of their type of tag.
 
-A CSS class is a way to identify specific HTML elements regardless of their type of tag. In HTML a class is defined as an **attribute**:
+In HTML a class is defined as an **attribute**, while in CSS the class is used as a selector.
 
 HTML:
 ```html
