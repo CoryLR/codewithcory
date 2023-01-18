@@ -1,5 +1,5 @@
 
-[Code With Cory (Home)](../../../README.md) --> [Beginner Projects](../../../README.md#beginner-projects)
+[<-- Code With Cory Home](../../../README.md#code-with-cory)
 
 # First Website
 
