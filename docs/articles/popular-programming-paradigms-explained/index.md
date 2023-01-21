@@ -131,7 +131,7 @@ Use procedural programming to make your code more:
 
 ## 4) Object-Oriented Programming (OOP)
 
-By making code resemble real-world objects, object-oriented programming makes code easier to think about. It’s all about organizing concepts in an understandable way.
+By making code resemble real-world objects, object-oriented programming makes code easier to think about. OOP is all about organizing concepts in an understandable way and making messaging between different groups of code easier.
 
 ![](./assets/OOP-People.png)
 
@@ -161,14 +161,16 @@ Next we can create a “Lea” object from our `Person` Class:
 var leaObject = new Person("Lea", "Hi!");
 ```
 
-This line creates a Lea object using the `Person` class as a blueprint. Because of how the `constructor` method of the class is written, the first argument (“Lea”) gets assigned to the `name` property, and the second argument (“Hi!”) gets assigned to the `greeting` property.
+This line of code creates a Lea object using the `Person` class as a blueprint. Because of how the `constructor` method of the class is written, the first argument (“Lea”) gets assigned to the `name` property, and the second argument (“Hi!”) gets assigned to the `greeting` property.
 
 ```javascript
 leaObject.greet();
 // Result: "Lea says Hi!"
 ```
 
-Line 11 calls `leaObject`’s `greet()` function to make Lea say “Hi!”. Notice the “dot” notation: a period (`.`) is a common syntax used to access a property or method inside the preceding object. In this case we are calling the `greet` method, a function that is part of `leaObject`.
+Here we call `leaObject`’s `greet()` function to make Lea say “Hi!”. Notice the **dot notation**: a period (`.`) is a common syntax used to access a property or method inside the preceding object. In this case we are calling the `greet` method, a function that is part of `leaObject`.
+
+This `greet` method (function) acts as an interface into the `leaObject`, abstracting the code so that it is still useful while not having to think about the inner-workings of the `leaObject`.
 
 We can also use the `Person` class to easily create more people, all of which have their own `greet()` method already built-in:
 
@@ -199,7 +201,7 @@ tobyObject.greet(); // Result: "Toby says Hello"
 tobyObject.sayScore(); // Result: "Toby's score is 90"
 ```
 
-Because the `Player` class extends the `Person` class, the new `tobyObject` has the properties and methods of both a Person and a Player. The `super` statement in line 20 provides these from the `Person` class. Inheritance makes writing new Classes easy and helps organize the relationship between them in an intuitive way.
+Because the `Player` class extends the `Person` class, the new `tobyObject` has the properties and methods of both a Person and a Player. The `super` statement provides these properties and methods from the parent `Person` class. Inheritance makes writing new Classes easier and helps organize the relationship between them in an intuitive way.
 
 Common OOP terminology:
 
