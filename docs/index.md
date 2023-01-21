@@ -6,7 +6,7 @@ title: Home
 
 Information about Software Engineering and coding.
 
-Created by Cory Leigh Rahman - [LinkedIn](https://www.linkedin.com/in/corylr/) | [Twitter](https://twitter.com/Cory_LR) | [GitHub](https://github.com/CoryLR)
+Created by Cory Leigh Rahman - [LinkedIn](https://www.linkedin.com/in/corylr/), [Twitter](https://twitter.com/Cory_LR), [GitHub](https://github.com/CoryLR)
 
 Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)
 
