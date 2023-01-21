@@ -1,5 +1,8 @@
+---
+title: First Website
+---
 
-[← Code With Cory - Home](../../README.md)
+[← Code With Cory (Home)](../../index.md)
 
 # First Website
 

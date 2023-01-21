@@ -1,5 +1,8 @@
+---
+title: Programming Paradigms Explained
+---
 
-[← Code With Cory - Home](../../README.md)
+[← Code With Cory (Home)](../../index.md)
 
 # Popular Programming Paradigms Explained
 
