@@ -1,6 +1,7 @@
 ---
 title: Home
 ---
+<script src="./src/home.js"></script>
 
 # Code With Cory
 
@@ -8,7 +9,7 @@ Information about Software Engineering and coding.
 
 Created by Cory Leigh Rahman - [LinkedIn](https://www.linkedin.com/in/corylr/), [Twitter](https://twitter.com/Cory_LR), [GitHub](https://github.com/CoryLR)
 
-Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)
+Star the [CodeWithCory repository on GitHub](https://github.com/CoryLR/codewithcory). <span data-stars-message></span>
 
 **Table of Contents**
 
@@ -38,3 +39,5 @@ Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)
 * **Resilient Coders**
   * See if you're eligible to apply to this highly selective and paid coding bootcamp (only available to certain cities): [resilientcoders.org/apply](https://www.resilientcoders.org/apply)
   * PS: If you're able, consider [donating](https://resilientcoders.org/donate) to Resilient Coders, it's an amazing and impactful non-profit
+
+<span data-debugging-output></span>
