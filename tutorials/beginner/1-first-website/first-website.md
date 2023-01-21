@@ -211,6 +211,8 @@ Next, add a paragraph tag with some text. Replace "YOUR TEXT HERE" with a senten
 <p>YOUR TEXT HERE</p>
 ```
 
+⚠️ Common pitfall: Once you start editing your HTML, make sure your opening (e.g. `<p>`) and closing (e.g. `</p>`) tags remain intact. All HTML tags must be *precisely typed*, or else the web browser will read it wrong.
+
 ---
 
 ### 3.6) Viewing In-Browser
@@ -498,7 +500,7 @@ In CSS, `.description` is how you specify a class as a CSS **selector**. You use
 
 Two of the first things you can do to make your page look good are choose a nice font and add some spacing.
 
-Let's start by targeting the `body` HTML element. Add a new empty ruleset like so:
+Let's start by targeting the `body` HTML element. Add a new empty ruleset to your `style.css` file like so:
 
 ```css
 body {
@@ -521,7 +523,7 @@ Next, let's add some spacing using the `padding` CSS property:
 ```css
 body {
   font-family: 'Arial';
-  padding: 5% 10%;
+  padding: 10%;
 }
 ```
 
@@ -543,7 +545,7 @@ Let's start out by giving your image a specific **class** so that it can be targ
 <img src="./img/your-image-name.jpeg" class="main-image" />
 ```
 
-Next, target your main image with CSS by adding a new empty ruleset below your previous `body` ruleset. Remember that in CSS the period `.` indicates that your selector is targeting a **class** on HTML element(s).
+Next, target your main image with CSS by adding a new empty ruleset below your previous `body` ruleset. Remember that in CSS the period `.` indicates that your selector is targeting a **class** on HTML element(s). Add the following *below* your `body` ruleset.
 
 ```css
 .main-image {
