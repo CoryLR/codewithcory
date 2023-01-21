@@ -3,6 +3,8 @@ title: Home
 ---
 <script src="./src/home.js"></script>
 
+![](./src/assets/code-owls-banner-1.jpg)
+
 # Code With Cory
 
 Information about Software Engineering and coding.
@@ -18,19 +20,19 @@ Star the [CodeWithCory repository on GitHub](https://github.com/CoryLR/codewithc
   - [Tutorials](#tutorials)
   - [Recommended Resources](#recommended-resources)
 
----
+<br/>
 
 ## Articles
 
 * [Popular Programming Paradigms Explained](./articles/popular-programming-paradigms-explained/index.md): Imperative vs. Declarative vs. Procedural vs. Object-Oriented (OOP) vs. Functional
 
----
+<br/>
 
 ## Tutorials
 
 * [First Website](./tutorials/100-first-website/index.md): Build a Showcase Page
 
----
+<br/>
 
 ## Recommended Resources
 
