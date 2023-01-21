@@ -3,7 +3,7 @@
 
 Information about Software Engineering and coding by Cory Leigh Rahman ([LinkedIn](https://www.linkedin.com/in/corylr/) | [Twitter](https://twitter.com/Cory_LR) | [GitHub](https://github.com/CoryLR))
 
-Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)!
+Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)
 
 **Table of Contents**
 
@@ -22,7 +22,7 @@ Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)!
 
 ## Tutorials
 
-* [First Website](./tutorials/beginner/1-first-website/first-website.md): Build a Showcase Page
+* [First Website](./tutorials/100-first-website/first-website.md): Build a Showcase Page
 
 ---
 
@@ -32,4 +32,4 @@ Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)!
   * Link: **[leonnoel.com/100devs](https://leonnoel.com/100devs/)**
 * **Resilient Coders**
   * See if you're eligible to apply to this highly selective and paid coding bootcamp (only available to certain cities): [resilientcoders.org/apply](https://www.resilientcoders.org/apply)
-  * PS: If you're able, consider [donating](https://resilientcoders.org/donate) to this amazing non-profit
+  * PS: If you're able, consider [donating](https://resilientcoders.org/donate) to Resilient Coders, it's an amazing and impactful non-profit

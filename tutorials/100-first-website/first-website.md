@@ -1,5 +1,5 @@
 
-[← Code With Cory - Home](../../../README.md#code-with-cory)
+[← Code With Cory - Home](../../README.md)
 
 # First Website
 
@@ -147,9 +147,9 @@ HTML looks like this:
 
 ✨ Key Concept: HTML **Tags** ✨
 
-HTML syntax (code grammar) uses opening and closing triangle brackets to define HTML tags. These tags tell the web browser what content it needs to display and where.
+HTML syntax (code grammar) uses opening and closing triangle brackets `< >` to define HTML tags. These tags tell the web browser what content it needs to display and where.
 
-* Most HTML tags have both opening and closing tags, like `<section>` and `</section>`
+* Most HTML tags have both opening and closing tags, like `<section> </section>`, and you can put content between them
 * Some HTML tags do not have a closing tag and instead are self-closing, like the image tag `<img/>`
 
 In the above example, we have two tags:

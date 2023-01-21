@@ -1,5 +1,5 @@
 
-[← Code With Cory - Home](../../README.md#code-with-cory)
+[← Code With Cory - Home](../../README.md)
 
 # Popular Programming Paradigms Explained
 
