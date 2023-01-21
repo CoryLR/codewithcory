@@ -1,6 +1,9 @@
+
 # Code With Cory
 
 Information about Software Engineering and coding by Cory Leigh Rahman ([LinkedIn](https://www.linkedin.com/in/corylr/) | [Twitter](https://twitter.com/Cory_LR) | [GitHub](https://github.com/CoryLR))
+
+Star this [repository on GitHub](https://github.com/CoryLR/codewithcory)!
 
 **Table of Contents**
 
@@ -15,9 +18,13 @@ Information about Software Engineering and coding by Cory Leigh Rahman ([LinkedI
 
 * [Popular Programming Paradigms Explained](./articles/popular-programming-paradigms-explained/popular-programming-paradigms-explained.md): Imperative vs. Declarative vs. Procedural vs. Object-Oriented (OOP) vs. Functional
 
+---
+
 ## Tutorials
 
 * [First Website](./tutorials/beginner/1-first-website/first-website.md): Build a Showcase Page
+
+---
 
 ## Recommended Resources
 
@@ -25,3 +32,4 @@ Information about Software Engineering and coding by Cory Leigh Rahman ([LinkedI
   * Link: **[leonnoel.com/100devs](https://leonnoel.com/100devs/)**
 * **Resilient Coders**
   * See if you're eligible to apply to this highly selective and paid coding bootcamp (only available to certain cities): [resilientcoders.org/apply](https://www.resilientcoders.org/apply)
+  * PS: If you're able, consider [donating](https://resilientcoders.org/donate) to this amazing non-profit

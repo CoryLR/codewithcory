@@ -71,7 +71,7 @@ Next, make a project folder on your computer:
 │   │   │
 ```
 
-> Note: the trailing slash (`/`) like in `first-website/` typically indicates this is a folder
+> Note: don't include the trailing slashes (`/`) in your folder name, this is just a notation to indicate if something is a folder; for example, `first-website/`, indicates that `first-website` is a folder
 
 Finally, open your project folder in VS Code:
 1. Open the VS Code app
