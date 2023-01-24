@@ -1,0 +1,13 @@
+
+/*
+Add the following to any .md file to add this style:
+<link rel="stylesheet" href="./src/main.css" />
+*/
+
+h2 {
+  margin-top: 64px !important;
+}
+
+body {
+  padding-bottom: 128px !important;
+}

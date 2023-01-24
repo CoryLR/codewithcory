@@ -2,11 +2,7 @@
 /* Script for the home page */
 
 function main() {
-  try {
-    addGitHubStarTargetMessage();
-  } catch (err) {
-    console.error(err);
-  }
+  addGitHubStarTargetMessage();
 }
 
 function addGitHubStarTargetMessage() {
@@ -18,8 +14,9 @@ function addGitHubStarTargetMessage() {
       const starsSpan = document.querySelector('[data-stars-message]');
       starsSpan.textContent = `We currently have ${starsCount} stars! Can you help us get to ${starsTarget}?`;
     }).catch(err => {
-      throw new Error(err);
+      console.error(err);
     });
+
 }
 
 function calculateGitHubStarsTarget(currentStars) {
@@ -28,11 +25,4 @@ function calculateGitHubStarsTarget(currentStars) {
   return starsTarget;
 }
 
-function log(message) {
-  document.querySelector('[data-debugging-output]').textContent+= `
-
-${message}`;
-}
-
-/* Wait for the page to load before running the main function */
-window.onload = main;
+main();

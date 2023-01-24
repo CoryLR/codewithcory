@@ -1,6 +1,8 @@
 ---
 title: Programming Paradigms Explained
 ---
+<link rel="stylesheet" href="../../src/main.css" />
+<script src="../../src/main.js" defer></script>
 
 [← Code With Cory (Home)](../../index.md)
 
@@ -28,7 +30,6 @@ Table of Contents
     - [Key take-aways for functional programming](#key-take-aways-for-functional-programming)
   - [6) Wrap-Up \& Resources](#6-wrap-up--resources)
 
----
 
 ## 1) Intro: What is a "programming paradigm"?
 
@@ -75,7 +76,6 @@ WHERE name='Lea'
 * Declarative programming is sometimes used as an umbrella term to describe code that isn’t imperative
 * Other examples of declarative languages include HTML, CSS, and regex
 
----
 
 ## 3) Procedural Programming
 
@@ -127,7 +127,6 @@ Use procedural programming to make your code more:
 * Understandable (by using well-named procedures to add logical separations)
 * [Reusable](https://en.wikipedia.org/wiki/Reusability) (by using the same procedures multiple times and using procedure arguments to use them in different ways)
 
----
 
 ## 4) Object-Oriented Programming (OOP)
 
@@ -224,7 +223,6 @@ Use object-oriented programming to make your code more:
 * [Reusable](https://en.wikipedia.org/wiki/Reusability) (by using Classes to generate Objects, and by using [Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) & [Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)) to reuse Classes and their methods)
 * Stable (by [encapsulating](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) and protecting code inside Objects, and by providing clear endpoints for automated testing, improving [refactorability](https://en.wikipedia.org/wiki/Code_refactoring))
 
----
 
 ## 5) Functional Programming (FP)
 
@@ -269,7 +267,6 @@ Use functional programming to make your code more:
 * [Reusable](https://en.wikipedia.org/wiki/Reusability) (by forcing functions to be more [modular](https://en.wikipedia.org/wiki/Modular_programming) and by allowing first-class functions to be passed as arguments for deep customization)
 * Understandable (by making logic easier to follow through strict pure function parameters and by showing intent up-front)
 
----
 
 ## 6) Wrap-Up & Resources
 
