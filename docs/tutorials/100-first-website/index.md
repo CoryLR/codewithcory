@@ -138,29 +138,29 @@ HTML is a markup language and file-format that web browsers display. For example
 HTML looks like this:
 
 ```html
-<section>
+<div>
    <p>Hello, World!</p>
-</section>
+</div>
 ```
 
 🔑 Key Concept: HTML **Tags**
 
 HTML syntax (code grammar) uses opening and closing triangle brackets `< >` to define HTML tags. These tags tell the web browser what content it needs to display and where.
 
-* Most HTML tags have both opening and closing tags, like `<section> </section>`, and you can put content between them
+* Most HTML tags have both opening and closing tags, like `<div> </div>`, and you can put content between them
 * Some HTML tags do not have a closing tag and instead are self-closing, like the image tag `<img/>`
 
 In the above example, we have two tags:
 
 * `<p>` - this is a **paragraph** tag, used for holding text and giving it some space
-* `<section>` - this **section** tag groups other HTML together when you put them between its opening and closing tags
+* `<div>` - the **divider** tag is used to group other HTML elements together by placing them between the `div`'s opening and closing tags
 
 🔑 Key Concept: HTML **Elements**
 
 An HTML **element** is just one complete tag. For example, if you have multiple paragraphs on your page, you could say you have multiple `p` tags, but each one is a different HTML element.
 
 > Notes:
-> * When HTML elements are grouped inside other HTML elements, it's common to indent them as you see above with the paragraph `<p>` element indented since it's inside the section element.
+> * When HTML elements are grouped inside other HTML elements, it's common to indent them as you see above with the paragraph `<p>` element indented since it's inside the div element.
 > * In VS Code you press Shift+Option+F (macOS) or Shift+Alt+F (Windows) to auto-format the file. This will fix the indentation for you, assuming your opening and closing tags have proper syntax.
 
 
@@ -414,7 +414,7 @@ The `head` section of your HTML should now look like this:
 CSS looks like this:
 
 ```css
-section {
+div {
    font-family: 'Arial';
    color: 'black';
 }
@@ -422,12 +422,12 @@ section {
 
 🔑 Key Concept: CSS **Selectors**
 
-In the example above, `section` is a CSS **selector**. This is the name of the HTML tag that the CSS style rules will apply to.
+In the example above, `div` is a CSS **selector**. This is the name of the HTML tag that the CSS style rules will apply to.
 
 🔑 Key Concept: CSS **Rules and Properties**
 
 ```css
-section {
+div {
    font-family: 'Arial';   <-- Rule
    ^^^^^^^^^^^
    Property
@@ -447,7 +447,7 @@ This rule will change the text font of all text font-face to Arial.
 
 🔑 Key Concept: CSS **Classes**
 
-Let's say you have five `section` tags but you want to change the style of just *one or two* specific ones without changing *all* them. This is where CSS **classes** come to the rescue. A CSS class is a way to identify specific HTML elements regardless of their type of tag.
+Let's say you have five `div` elements but you want to change the style of just *one or two* specific ones without changing *all* them. This is where CSS **classes** come to the rescue. A CSS class is a way to identify specific HTML elements regardless of their type of tag.
 
 In HTML a class is defined as an **attribute**, while in CSS the class is used as a selector.
 
