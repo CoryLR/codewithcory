@@ -21,16 +21,19 @@ A relational database, at its core, is just a group of tables that have somethin
   <label>Table: <code>animals_needing_homes</code></label>
   <table>
     <tr>
+      <th>ID</th>
       <th>NAME</th>
       <th>SPECIES</th>
       <th>TEMPERAMENT</th>
     </tr>
     <tr>
+      <td>0</td>
       <td>Howell</td>
       <td>Dog</td>
       <td>Friendly, but loud</td>
     </tr>
     <tr>
+      <td>1</td>
       <td>Hops</td>
       <td>Rabbit</td>
       <td>A bit jumpy</td>
@@ -39,69 +42,27 @@ A relational database, at its core, is just a group of tables that have somethin
 </div>
 
 <div class="small-table">
-  <label>Table: <code>TEST</code></label>
+  <label>Table: <code>TODO</code></label>
   <table>
     <tr>
-      <th>NAME</th>
-      <th>SPECIES</th>
-      <th>TEMPERAMENT</th>
+      <th>ID</th>
+      <th>?</th>
+      <th>?</th>
+      <th>?</th>
     </tr>
     <tr>
-      <td>Howell</td>
-      <td>Dog</td>
-      <td>Friendly, but loud</td>
+      <td>0</td>
+      <td>?</td>
+      <td>?</td>
+      <td>?</td>
     </tr>
     <tr>
-      <td>Hops</td>
-      <td>Rabbit</td>
-      <td>A bit jumpy</td>
+      <td>1</td>
+      <td>?</td>
+      <td>?</td>
+      <td>?</td>
     </tr>
   </table>
 </div>
-
-<div class="small-table">
-  <label>Table: <code>TEST</code></label>
-  <table>
-    <tr>
-      <th>NAME</th>
-      <th>SPECIES</th>
-      <th>TEMPERAMENT</th>
-    </tr>
-    <tr>
-      <td>Howell</td>
-      <td>Dog</td>
-      <td>Friendly, but loud</td>
-    </tr>
-    <tr>
-      <td>Hops</td>
-      <td>Rabbit</td>
-      <td>A bit jumpy</td>
-    </tr>
-  </table>
-</div>
-
-<div class="small-table">
-  <label>Table: <code>TEST</code></label>
-  <table>
-    <tr>
-      <th>NAME</th>
-      <th>SPECIES</th>
-      <th>TEMPERAMENT</th>
-    </tr>
-    <tr>
-      <td>Howell</td>
-      <td>Dog</td>
-      <td>Friendly, but loud</td>
-    </tr>
-    <tr>
-      <td>Hops</td>
-      <td>Rabbit</td>
-      <td>A bit jumpy</td>
-    </tr>
-  </table>
-</div>
-
-
-
 
 
