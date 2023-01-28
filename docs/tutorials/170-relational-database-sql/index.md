@@ -26,30 +26,30 @@ What is a "relational database"? What does SQL have to do with it? What's the bi
 
 A relational database, at its core, is just a group of tables that have something to do with one-another, like this:
 
-<br/><br/>
+<br/>
 <div class="small-table">
   <label>Table: <code>animals</code> (that need homes)</label>
   <table>
     <tr>
-      <th>PET_ID</th>
+      <th>ID</th>
       <th>NAME</th>
       <th>SPECIES</th>
-      <th>ROOM</th>
+      <th>ROOM_ID</th>
     </tr>
     <tr>
-      <td>0</td>
+      <td>1</td>
       <td>Howell</td>
       <td>Dog</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>2</td>
       <td>Chonk</td>
       <td>Cat</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>2</td>
+      <td>3</td>
       <td>Hops</td>
       <td>Rabbit</td>
       <td>1</td>
@@ -61,20 +61,20 @@ A relational database, at its core, is just a group of tables that have somethin
   <label>Table: <code>rooms</code> (at the shelter)</label>
   <table>
     <tr>
-      <th>ROOM_ID</th>
+      <th>ID</th>
       <th>CAPACITY</th>
     </tr>
     <tr>
-      <td>0</td>
+      <td>1</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>2</td>
       <td>50</td>
     </tr>
   </table>
 </div>
-<br/><br/>
+<br/>
 
 This example is of a simple Animal Shelter database, but the all the concepts in this tutorial can be applied to any relational database.
 
@@ -95,7 +95,7 @@ Relationships between database tables are tracked through identifier ("ID") fiel
 
 🔑 Key Concept: **Foreign Key (FK)**
 
-Notice how the `animals` table above has a `ROOM` column that matches up to the `rooms` table's `ROOM_ID` column. The `animals` table's `ROOM` column is considered a **foreign key** (FK) because it keeps track of which animals are staying in which rooms by referencing the primary key of one of the rooms listed in the `rooms` table.
+Notice how the `animals` table above has a `ROOM_ID` column that matches up to the `rooms` table's `ID` column. The `animals` table's `ROOM_ID` column is considered a **foreign key** (FK) because it keeps track of which animals are staying in which rooms by referencing the primary key of one of the rooms listed in the `rooms` table.
 
 The presence of the `ROOM` foreign key in the `animals` table is what creates a one-to-many relationship between the `rooms` and `animals` tables.
 
@@ -117,7 +117,7 @@ Here is an example of an SQL command you can use to create a database table:
 
 ```sql
 CREATE TABLE example_table (
-  ROW_ID INT PRIMARY KEY,
+  ID INT PRIMARY KEY AUTOINCREMENT,
   COLUMN1 INT,
   COLUMN2 STRING,
 )
@@ -129,7 +129,9 @@ Let's break this down:
 * Each **column definition**, like `COLUMN1 INT`, consists of the name of the column followed by the **data type** that should be stored in that column. We see two common data types used here:
   * `INT` - this means **integer**, typically whole numbers
   * `STRING` - this means a **string of characters**, typically regular text like words and sentences.
-* Note that the `ROW_ID` column also has the `PRIMARY KEY` keywords to signify that this column is the primary key and must be unique
+* Note that the `ID` column also has some additional properties:
+  * The `PRIMARY KEY` keywords signify that this column is the primary key and must be unique
+  * The `AUTOINCREMENT` keyword makes it so that the `ID` column automatically assigns a new number to each new record
 
 Here is an SQL command you can use to create the `animals` table from the example above:
 
@@ -149,24 +151,71 @@ Type the full SQL command from above into the text box below and then click Run 
   <textarea rows="7"></textarea>
   <br/>
   <button class="run">Run</button>
-  <button class="reset" data-reset-id="1">Reset Database</button>
+  <button class="reset" data-reset-id="1" title="">Restore Database To This Point</button>
   <br/><br/>
   <div>SQL Output:</div>
   <div data-sql-result></div>
+  <br/><br/>
 </div>
 
-<br/>
-<br/>
-
-If the `CREATE TABLE` SQL command was successful, you will see `animals` in the list of tables below:
+Once the `CREATE TABLE` SQL command is successfully run, you will see `animals` in the list of tables below:
 
 <div class="list-of-db-tables">- None</div>
 
+<br/><br/>
 
+Next, write your own `CREATE TABLE` SQL command to initialize the `rooms` table as shown below.
 
+<div class="small-table">
+  <label>Table: <code>rooms</code> (at the shelter)</label>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>CAPACITY</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>50</td>
+    </tr>
+  </table>
+</div>
+<br/>
 
+<details>
+  <summary>Hints (click to expand):</summary>
+  <ul>
+    <li>You do not need to create the row data yet, just the table.</li>
+    <li>Note that you will need to pick a data type for the `CAPACITY` column. Choose the most appropriate between `INT` (number) and `STRING` (text).</li>
+    <li>Don't forget to add `PRIMARY KEY` and `AUTOINCREMENT` to the `ID` column.</li>
+  </ul>
+</details>
 
+<div class="sql-component">
+  <div>SQL Input</div>
+  <textarea rows="7"></textarea>
+  <br/>
+  <button class="run">Run</button>
+  <button class="reset" data-reset-id="2" title="">Restore Database To This Point</button>
+  <br/><br/>
+  <div>SQL Output:</div>
+  <div data-sql-result></div>
+  <br/><br/>
+</div>
 
+<details>
+  <summary>Solution (click to expand):</summary>
+  <p>Enter into the text area above:</p>
+<pre>
+CREATE TABLE rooms (
+  ID INT PRIMARY KEY AUTOINCREMENT,
+  CAPACITY INT,
+)
+</pre>
+</details>
 
 
 

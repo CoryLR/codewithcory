@@ -27,10 +27,10 @@ class Tutorial {
       });
 
       // TODO: Make Reset Database button functional
-      // sqlElement.querySelector('button.run').addEventListener('click', (event) => {
-      //   const sqlString = sqlElement.querySelector('textarea').value;
-      //   this.runSql(sqlElement, sqlString);
-      // });
+      sqlElement.querySelector('button.reset').addEventListener('click', (event) => {
+        const resetId = Number(event.target.getAttribute('data-reset-id'));
+        this.restoreDatabaseToPoint(resetId);
+      });
 
     });
   }
@@ -42,11 +42,11 @@ class Tutorial {
       const result = this.database.exec(sqlString);
       if (result && Object.keys(result).length > 0) {
         this.showSqlResult(resultElement, result);
-        console.log(sqlString.trim().slice(0,12).toLocaleLowerCase());
+        console.log(sqlString.trim().slice(0, 12).toLocaleLowerCase());
       } else {
         this.showSqlError(resultElement, 'Successful, nothing to show.');
       }
-      if (sqlString.trim().slice(0,12).toLocaleLowerCase() === 'create table') {
+      if (sqlString.trim().slice(0, 12).toLocaleLowerCase() === 'create table') {
         this.updateListOfDatabaseTables();
       }
     } catch (error) {
@@ -75,6 +75,39 @@ class Tutorial {
       element.replaceChildren();
       element.appendChild(resultHtmlTable);
     })
+  }
+
+  /**
+   * @param { Number } resetId 
+   */
+  restoreDatabaseToPoint(resetId) {
+    this.database = new this.alasql.Database();
+    const sqlCommands = this.getSqlCommands();
+    for (const sqlCommand of sqlCommands) {
+      if (sqlCommand.id < resetId) {
+        this.database.exec(sqlCommand.sql);
+      } else {
+        break;
+      }
+    }
+    this.updateListOfDatabaseTables();
+  }
+
+  getSqlCommands() {
+    return [
+      { id: 1, sql: `
+        CREATE TABLE animals (
+        ID INT PRIMARY KEY,
+        NAME STRING,
+        SPECIES STRING,
+        ROOM INT
+      )` },
+      { id: 2, sql: `
+        CREATE TABLE rooms (
+        ID INT PRIMARY KEY,
+        CAPACITY INT,
+      )` },
+    ];
   }
 
   createTableElementFromObject(data) {

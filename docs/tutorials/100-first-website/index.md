@@ -234,7 +234,7 @@ For the rest of this lesson, you should remember to save your files and refresh 
 
 Let's add an image relating to your topic. 
 
-First, find an image file to use. Typically these end with `.jpg`, `.jpeg`, or `.png`. Then create a new folder next to your `index.html` called `img`. Put the image file you would like to use in this new `img` folder.
+First, find an image file to use. Typically these end with `.jpg`, `.jpeg`, or `.png`. Then create a new folder inside your `first-website/` folder (next to your `index.html`) and call the new folder `img`. Put the image file you would like to use in this new `img` folder.
 
 Your folder structure should now look like this:
 
