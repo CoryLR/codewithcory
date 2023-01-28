@@ -18,6 +18,7 @@ What is a "relational database"? What does SQL have to do with it? What's the bi
     - [1.2) Database Relationships](#12-database-relationships)
   - [2) SQL](#2-sql)
     - [2.1) Create Database Tables](#21-create-database-tables)
+  - [Test Area](#test-area)
 
 
 ## 1) Relational Database Core Concepts
@@ -158,6 +159,19 @@ Type the full SQL command from above into the text box below and then click Run 
   <br/><br/>
 </div>
 
+<details>
+  <summary>Solution (click to expand):</summary>
+  <p>Enter this into the text area, then click run:</p>
+<pre>
+CREATE TABLE animals (
+  ID INT PRIMARY KEY,
+  NAME STRING,
+  SPECIES STRING,
+  ROOM INT
+)
+</pre>
+</details>
+
 Once the `CREATE TABLE` SQL command is successfully run, you will see `animals` in the list of tables below:
 
 <div class="list-of-db-tables">- None</div>
@@ -208,14 +222,30 @@ Next, write your own `CREATE TABLE` SQL command to initialize the `rooms` table 
 
 <details>
   <summary>Solution (click to expand):</summary>
-  <p>Enter into the text area above:</p>
+  <p>Enter this into the text area, then click run:</p>
 <pre>
 CREATE TABLE rooms (
   ID INT PRIMARY KEY AUTOINCREMENT,
-  CAPACITY INT,
+  CAPACITY INT
 )
 </pre>
 </details>
 
+Once the `CREATE TABLE` SQL command is successfully run, you will now also see `rooms` in the list of tables:
 
+<div class="list-of-db-tables">- None</div>
+
+
+## Test Area
+<div class="sql-component">
+  <div>SQL Input</div>
+  <textarea rows="7"></textarea>
+  <br/>
+  <button class="run">Run</button>
+  <button class="reset" data-reset-id="99" title="">Restore Database To This Point</button>
+  <br/><br/>
+  <div>SQL Output:</div>
+  <div data-sql-result></div>
+  <br/><br/>
+</div>
 

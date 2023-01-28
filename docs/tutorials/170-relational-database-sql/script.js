@@ -105,7 +105,7 @@ class Tutorial {
       { id: 2, sql: `
         CREATE TABLE rooms (
         ID INT PRIMARY KEY,
-        CAPACITY INT,
+        CAPACITY INT
       )` },
     ];
   }
