@@ -1,0 +1,25 @@
+{
+  "name": "codewithcory",
+  "version": "0.0.1",
+  "description": "Information about Software Engineering and coding by Cory Leigh Rahman",
+  "main": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "jasmine": "^4.5.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoryLR/codewithcory.git"
+  },
+  "author": "Cory Leigh Rahman",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/CoryLR/codewithcory/issues"
+  },
+  "homepage": "https://codewithcory.co"
+}
