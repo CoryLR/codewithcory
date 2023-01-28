@@ -18,6 +18,8 @@ What is a "relational database"? What does SQL have to do with it? What's the bi
     - [1.2) Database Relationships](#12-database-relationships)
   - [2) SQL](#2-sql)
     - [2.1) Create Database Tables](#21-create-database-tables)
+    - [2.1) Insert Data](#21-insert-data)
+  - [Work in Progress](#work-in-progress)
   - [Test Area](#test-area)
 
 
@@ -84,7 +86,7 @@ This example is of a simple Animal Shelter database, but the all the concepts in
 
 🔑 Key Concept: **Relationships**
 
-Notice how these tables have a relationship with one-another. Each animal has to have a place to stay within the shelter. In this case, the dog and cat are both kept in room #0 and the rabbit is kept in room #1. The most common kinds of relationships are:
+Notice how these tables have a relationship with one-another. Each animal has to have a place to stay within the shelter. In this case, the dog and cat are both kept in room #1 and the rabbit is kept in room #2. The most common kinds of relationships are:
 
 1. **One-to-one (1:1) relationships** are when each row of two different tables match up with one, and only one, row from another table. An example could be an `animals` table and a `collars` table, each animal has one and exactly one collar.
 2. **One-to-many (1:N) relationships** are when items from one table can have a relationship with multiple items from another table. The `animals` and `rooms` tables above are a good example of this, since one room can hold multiple animals, but one animal is not kept in multiple rooms.
@@ -110,6 +112,7 @@ SQL (Structured Query Language) is specifically used to communicate with relatio
 * View tables and their data
 * Create reports and summarize information from the database
 
+
 ### 2.1) Create Database Tables
 
 First, let's create the Animal Shelter database tables shown above.
@@ -121,7 +124,7 @@ CREATE TABLE example_table (
   ID INT PRIMARY KEY AUTOINCREMENT,
   COLUMN1 INT,
   COLUMN2 STRING,
-)
+);
 ```
 
 Let's break this down:
@@ -142,14 +145,17 @@ CREATE TABLE animals (
   NAME STRING,
   SPECIES STRING,
   ROOM INT
-)
+);
 ```
 
 Type the full SQL command from above into the text box below and then click Run to create the table:
 
 <div class="sql-component">
+
   <div>SQL Input</div>
+
   <textarea rows="7"></textarea>
+  
   <br/>
   <button class="run">Run</button>
   <button class="reset" data-reset-id="1" title="">Restore Database To This Point</button>
@@ -207,10 +213,14 @@ Next, write your own `CREATE TABLE` SQL command to initialize the `rooms` table 
     <li>Don't forget to add `PRIMARY KEY` and `AUTOINCREMENT` to the `ID` column.</li>
   </ul>
 </details>
+<br/><br/>
 
 <div class="sql-component">
+
   <div>SQL Input</div>
+
   <textarea rows="7"></textarea>
+
   <br/>
   <button class="run">Run</button>
   <button class="reset" data-reset-id="2" title="">Restore Database To This Point</button>
@@ -230,16 +240,54 @@ CREATE TABLE rooms (
 )
 </pre>
 </details>
+<br/><br/>
 
 Once the `CREATE TABLE` SQL command is successfully run, you will now also see `rooms` in the list of tables:
 
 <div class="list-of-db-tables">- None</div>
 
 
+
+### 2.1) Insert Data
+
+Data is added to the database using the SQL `INSERT` command. Here's an example:
+
+```sql
+INSERT INTO example_table(COLUMN1, COLUMN2)
+VALUES(99, 'Bottles of beer on the wall')
+)
+```
+
+
+<!-- INSERT INTO example_table(COLUMN1, COLUMN2)
+VALUES(99, 'Problems') -->
+
+
+
+
+
+
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+## Work in Progress
+
+The rest of this tutorial is still a work in progress
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
 ## Test Area
+
 <div class="sql-component">
+
   <div>SQL Input</div>
+
   <textarea rows="7"></textarea>
+
   <br/>
   <button class="run">Run</button>
   <button class="reset" data-reset-id="99" title="">Restore Database To This Point</button>
