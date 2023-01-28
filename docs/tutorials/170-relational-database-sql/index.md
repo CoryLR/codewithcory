@@ -18,6 +18,7 @@ What is a "relational database"? What does SQL have to do with it? What's the bi
 
 A relational database, at its core, is just a group of tables that have something to do with one-another, like this:
 
+<br/><br/>
 <div class="small-table">
   <label>Table: <code>animals</code> (that need homes)</label>
   <table>
@@ -65,6 +66,7 @@ A relational database, at its core, is just a group of tables that have somethin
     </tr>
   </table>
 </div>
+<br/><br/>
 
 This example is of a simple Animal Shelter database, but the all the concepts in this tutorial can be applied to any relational database.
 
