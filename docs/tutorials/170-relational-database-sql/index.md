@@ -141,7 +141,7 @@ Here is an SQL command you can use to create the `animals` table from the exampl
 
 ```sql
 CREATE TABLE animals (
-  PET_ID INT PRIMARY KEY,
+  PET_ID INT PRIMARY KEY AUTOINCREMENT,
   NAME STRING,
   SPECIES STRING,
   ROOM INT

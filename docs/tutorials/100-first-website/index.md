@@ -445,7 +445,7 @@ All together:
 font-family: 'Arial';
 ```
 
-This rule will change the text font of all text font-face to Arial.
+This rule will change the text font of all text font-family to Arial.
 
 🔑 Key Concept: CSS **Classes**
 

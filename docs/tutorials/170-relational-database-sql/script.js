@@ -97,14 +97,14 @@ class Tutorial {
     return [
       { id: 1, sql: `
         CREATE TABLE animals (
-        ID INT PRIMARY KEY,
+        ID INT PRIMARY KEY AUTOINCREMENT,
         NAME STRING,
         SPECIES STRING,
         ROOM INT
       )` },
       { id: 2, sql: `
         CREATE TABLE rooms (
-        ID INT PRIMARY KEY,
+        ID INT PRIMARY KEY AUTOINCREMENT,
         CAPACITY INT
       )` },
     ];
