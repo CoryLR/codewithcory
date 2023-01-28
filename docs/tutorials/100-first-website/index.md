@@ -139,7 +139,7 @@ HTML looks like this:
 
 ```html
 <div>
-   <p>Hello, World!</p>
+  <p>Hello, World!</p>
 </div>
 ```
 
