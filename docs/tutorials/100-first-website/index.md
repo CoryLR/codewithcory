@@ -225,6 +225,8 @@ Once your `index.html` file is saved, open it in your web browser to see what it
 
 For the rest of this lesson, you should remember to save your files and refresh this browser tab to see the changes in real-time.
 
+⚠️ Common pitfall: Note that indentation and new-lines in the VS Code text editor won't reflect what you see in your web browser. Things like spacing and new lines should be controlled by adding new tags like a new paragraph (`<p></p>`). Later you will be able to further control spacing using CSS.
+
 > Note: If you make a code mistake in a file, use CMD+Z (macOS) or CTRL+Z (Windows) to **undo**.
 
 
@@ -238,8 +240,8 @@ Your folder structure should now look like this:
 
 ```text
 ├── first-website/
-│   ├── img/                           <-- New image folder
-│   │   ├── your-image-name.jpeg       <-- New image file
+│   ├── img/                        <-- New image folder
+│   │   ├── your-image-name.jpeg    <-- New image file
 │   ├── index.html
 │   │
 ```
