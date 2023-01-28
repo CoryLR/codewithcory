@@ -2,6 +2,7 @@
 title: Intro DBs & SQL
 ---
 <link rel="stylesheet" href="../../src/main.css" />
+<script src="./bundle.js" defer></script>
 
 [← Code With Cory (Home)](../../index.md)
 
