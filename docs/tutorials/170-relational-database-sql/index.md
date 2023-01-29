@@ -8,17 +8,20 @@ title: Intro DBs & SQL
 
 [← Code With Cory (Home)](../../index.md)
 
-# Introduction to Relational Databases & SQL
+# Introduction to Relational Databases and SQL
 
 What is a "relational database"? What does SQL have to do with it? What's the big deal? Read on to find out.
 
-- [Introduction to Relational Databases \& SQL](#introduction-to-relational-databases--sql)
+- [Introduction to Relational Databases and SQL](#introduction-to-relational-databases-and-sql)
   - [1) Relational Database Core Concepts](#1-relational-database-core-concepts)
     - [1.1) Database Tables](#11-database-tables)
     - [1.2) Database Relationships](#12-database-relationships)
   - [2) SQL](#2-sql)
-    - [2.1) Create Database Tables](#21-create-database-tables)
-    - [2.1) Insert Data](#21-insert-data)
+    - [2.1) SQL Syntax For Creating Database Tables](#21-sql-syntax-for-creating-database-tables)
+    - [2.2) Create Database Tables With SQL](#22-create-database-tables-with-sql)
+    - [2.3) SQL Syntax For Inserting Data](#23-sql-syntax-for-inserting-data)
+    - [2.4) Insert Data With SQL](#24-insert-data-with-sql)
+    - [2.5) SQL Syntax For Selecting / Viewing Data](#25-sql-syntax-for-selecting--viewing-data)
   - [Work in Progress](#work-in-progress)
   - [Test Area](#test-area)
 
@@ -43,19 +46,19 @@ A relational database, at its core, is just a group of tables that have somethin
       <td>1</td>
       <td>Howell</td>
       <td>Dog</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>2</td>
       <td>Chonk</td>
       <td>Cat</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>3</td>
       <td>Hops</td>
       <td>Rabbit</td>
-      <td>1</td>
+      <td>2</td>
     </tr>
   </table>
 </div>
@@ -113,7 +116,7 @@ SQL (Structured Query Language) is specifically used to communicate with relatio
 * Create reports and summarize information from the database
 
 
-### 2.1) Create Database Tables
+### 2.1) SQL Syntax For Creating Database Tables
 
 First, let's create the Animal Shelter database tables shown above.
 
@@ -137,11 +140,13 @@ Let's break this down:
   * The `PRIMARY KEY` keywords signify that this column is the primary key and must be unique
   * The `AUTOINCREMENT` keyword makes it so that the `ID` column automatically assigns a new number to each new record
 
+### 2.2) Create Database Tables With SQL
+
 Here is an SQL command you can use to create the `animals` table from the example above:
 
 ```sql
 CREATE TABLE animals (
-  PET_ID INT PRIMARY KEY AUTOINCREMENT,
+  ID INT PRIMARY KEY AUTOINCREMENT,
   NAME STRING,
   SPECIES STRING,
   ROOM INT
@@ -151,11 +156,8 @@ CREATE TABLE animals (
 Type the full SQL command from above into the text box below and then click Run to create the table:
 
 <div class="sql-component">
-
   <div>SQL Input</div>
-
   <textarea rows="7"></textarea>
-  
   <br/>
   <button class="run">Run</button>
   <button class="reset" data-reset-id="1" title="">Restore Database To This Point</button>
@@ -167,7 +169,7 @@ Type the full SQL command from above into the text box below and then click Run 
 
 <details>
   <summary>Solution (click to expand):</summary>
-  <p>Enter this into the text area, then click run:</p>
+  <p>Enter this into the text area, then click Run:</p>
 <pre>
 CREATE TABLE animals (
   ID INT PRIMARY KEY,
@@ -184,7 +186,7 @@ Once the `CREATE TABLE` SQL command is successfully run, you will see `animals` 
 
 <br/><br/>
 
-Next, write your own `CREATE TABLE` SQL command to initialize the `rooms` table as shown below.
+Next, write your own `CREATE TABLE` SQL command to create the `rooms` table as shown below.
 
 <div class="small-table">
   <label>Table: <code>rooms</code> (at the shelter)</label>
@@ -216,11 +218,8 @@ Next, write your own `CREATE TABLE` SQL command to initialize the `rooms` table 
 <br/><br/>
 
 <div class="sql-component">
-
   <div>SQL Input</div>
-
   <textarea rows="7"></textarea>
-
   <br/>
   <button class="run">Run</button>
   <button class="reset" data-reset-id="2" title="">Restore Database To This Point</button>
@@ -232,7 +231,7 @@ Next, write your own `CREATE TABLE` SQL command to initialize the `rooms` table 
 
 <details>
   <summary>Solution (click to expand):</summary>
-  <p>Enter this into the text area, then click run:</p>
+  <p>Enter this into the text area, then click Run:</p>
 <pre>
 CREATE TABLE rooms (
   ID INT PRIMARY KEY AUTOINCREMENT,
@@ -248,28 +247,136 @@ Once the `CREATE TABLE` SQL command is successfully run, you will now also see `
 
 
 
-### 2.1) Insert Data
+### 2.3) SQL Syntax For Inserting Data
 
-Data is added to the database using the SQL `INSERT` command. Here's an example:
+Data is added to the database using the SQL `INSERT INTO` command. Here's an example:
 
 ```sql
 INSERT INTO example_table(COLUMN1, COLUMN2)
-VALUES(99, 'Bottles of beer on the wall')
-)
+VALUES
+  (3, 'Musketeers'),
+  (9, 'Lives')
+  (99, 'Bottles of beer on the wall')
+;
 ```
 
+This example `INSERT` statement will add **3 new rows** to the `example_table` table.
+
+Let's break down the syntax:
+
+* The first line, following `INSERT INTO`, directs which table and which columns of that table we want to add data to
+* The data that you want to add to the table comes after the `VALUES` keyword
+* It's important to note that the order of the column names, like `(COLUMN1, COLUMN2)` needs to match with the order of the data being inserted, like `(3, 'Musketeers')`. When this row is added to the table, the integer number `3`  will be inserted under the `COLUMN1` column, and the string text `'Musketeers'` will be inserted under the `COLUMN2` column.
+
+<!-- * The `VALUES` of Izzy's heart are as follows: Cory, Taco Bamba, Cinnamon rolls, rum & coke, cats, and nature.  -->
 
 <!-- INSERT INTO example_table(COLUMN1, COLUMN2)
 VALUES(99, 'Problems') -->
 
 
+### 2.4) Insert Data With SQL
+
+Here is an SQL command you can use to add a few rows of data to the `animals` table:
+
+```sql
+INSERT INTO animals (NAME, SPECIES, ROOM_ID)
+VALUES
+  ('Howell', 'Dog', 1),
+  ('Chonk', 'Cat', 1),
+  ('Hops', 'Rabbit', 2)
+;
+```
+
+Type the full SQL command from above into the text box below and then click Run to insert the rows into the `animals` table:
+
+<div class="sql-component">
+  <div>SQL Input</div>
+  <textarea rows="7"></textarea>
+  <br/>
+  <button class="run">Run</button>
+  <button class="reset" data-reset-id="3" title="">Restore Database To This Point</button>
+  <br/><br/>
+  <div>SQL Output:</div>
+  <div data-sql-result></div>
+  <br/><br/>
+</div>
+
+<details>
+  <summary>Solution (click to expand):</summary>
+  <p>Enter this into the text area, then click Run:</p>
+<pre>
+INSERT INTO animals (NAME, SPECIES, ROOM_ID)
+VALUES
+  ('Howell', 'Dog', 1),
+  ('Chonk', 'Cat', 1),
+  ('Hops', 'Rabbit', 2)
+;
+</pre>
+</details>
 
 
+Next, write your own `INSERT` SQL command to add some rows to the `rooms` table as shown below.
 
+<div class="small-table">
+  <label>Table: <code>rooms</code> (at the shelter)</label>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>CAPACITY</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>50</td>
+    </tr>
+  </table>
+</div>
+<br/>
 
-
+<details>
+  <summary>Hints (click to expand):</summary>
+  <ul>
+    <li>Reference the `INSERT` example shown above for the `animals`, but modify it for the `rooms` table. You will want to make sure to change the table name, column names, and values.</li>
+    <li>Don't forget that the order of the column names should match the order of the values, this is how SQL knows which data to put under which table columns.</li>
+  </ul>
+</details>
 <br/><br/>
+
+<div class="sql-component">
+  <div>SQL Input</div>
+  <textarea rows="7"></textarea>
+  <br/>
+  <button class="run">Run</button>
+  <button class="reset" data-reset-id="4" title="">Restore Database To This Point</button>
+  <br/><br/>
+  <div>SQL Output:</div>
+  <div data-sql-result></div>
+  <br/><br/>
+</div>
+
+<details>
+  <summary>Solution (click to expand):</summary>
+  <p>Enter this into the text area, then click run:</p>
+<pre>
+INSERT INTO rooms (CAPACITY)
+VALUES (2), (50);
+</pre>
+</details>
 <br/><br/>
+
+### 2.5) SQL Syntax For Selecting / Viewing Data
+
+
+
+
+
+
+
+
+
 <br/><br/>
 
 ## Work in Progress
@@ -278,7 +385,7 @@ The rest of this tutorial is still a work in progress
 
 <br/><br/>
 <br/><br/>
-<br/><br/>
+
 
 ## Test Area
 

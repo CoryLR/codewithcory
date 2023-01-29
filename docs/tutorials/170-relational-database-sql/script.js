@@ -100,13 +100,24 @@ class Tutorial {
         ID INT PRIMARY KEY AUTOINCREMENT,
         NAME STRING,
         SPECIES STRING,
-        ROOM INT
-      )` },
+        ROOM_ID INT
+      );` },
       { id: 2, sql: `
         CREATE TABLE rooms (
         ID INT PRIMARY KEY AUTOINCREMENT,
         CAPACITY INT
       )` },
+      { id: 3, sql: `
+        INSERT INTO animals (NAME, SPECIES, ROOM_ID)
+        VALUES
+          ('Howell', 'Dog', 1),
+          ('Chonk', 'Cat', 1),
+          ('Hops', 'Rabbit', 2)
+      ;` },
+      { id: 4, sql: `
+        INSERT INTO rooms (CAPACITY)
+        VALUES (2), (50)
+      ;` },
     ];
   }
 
