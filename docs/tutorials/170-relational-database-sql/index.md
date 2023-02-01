@@ -20,8 +20,9 @@ What is a "relational database"? What does SQL have to do with it? What's the bi
     - [2.1) SQL Syntax For Creating Database Tables](#21-sql-syntax-for-creating-database-tables)
     - [2.2) Create Database Tables With SQL](#22-create-database-tables-with-sql)
     - [2.3) SQL Syntax For Inserting Data](#23-sql-syntax-for-inserting-data)
-    - [2.4) Insert Data With SQL](#24-insert-data-with-sql)
+    - [2.4) Insert (Add) Data With SQL](#24-insert-add-data-with-sql)
     - [2.5) SQL Syntax For Selecting / Viewing Data](#25-sql-syntax-for-selecting--viewing-data)
+    - [2.6) Select (View) Data With SQL](#26-select-view-data-with-sql)
   - [Work in Progress](#work-in-progress)
   - [Test Area](#test-area)
 
@@ -103,7 +104,7 @@ Relationships between database tables are tracked through identifier ("ID") fiel
 
 Notice how the `animals` table above has a `ROOM_ID` column that matches up to the `rooms` table's `ID` column. The `animals` table's `ROOM_ID` column is considered a **foreign key** (FK) because it keeps track of which animals are staying in which rooms by referencing the primary key of one of the rooms listed in the `rooms` table.
 
-The presence of the `ROOM` foreign key in the `animals` table is what creates a one-to-many relationship between the `rooms` and `animals` tables.
+The presence of the `ROOM_ID` foreign key in the `animals` table is what creates a one-to-many relationship between the `rooms` and `animals` tables.
 
 
 ## 2) SQL
@@ -130,7 +131,7 @@ CREATE TABLE example_table (
 );
 ```
 
-Let's break this down:
+Let's break down the syntax:
 * `CREATE TABLE` are the keywords telling SQL you want to create a table, and must be immediately followed by the name of the table, in this case `example_table`
 * The parentheses `( ... )` you see near the beginning and end define where the **column definitions** go. Separate each column definition by a comma `,`.
 * Each **column definition**, like `COLUMN1 INT`, consists of the name of the column followed by the **data type** that should be stored in that column. We see two common data types used here:
@@ -149,7 +150,7 @@ CREATE TABLE animals (
   ID INT PRIMARY KEY AUTOINCREMENT,
   NAME STRING,
   SPECIES STRING,
-  ROOM INT
+  ROOM_ID INT
 );
 ```
 
@@ -175,7 +176,7 @@ CREATE TABLE animals (
   ID INT PRIMARY KEY,
   NAME STRING,
   SPECIES STRING,
-  ROOM INT
+  ROOM_ID INT
 )
 </pre>
 </details>
@@ -274,7 +275,7 @@ Let's break down the syntax:
 VALUES(99, 'Problems') -->
 
 
-### 2.4) Insert Data With SQL
+### 2.4) Insert (Add) Data With SQL
 
 Here is an SQL command you can use to add a few rows of data to the `animals` table:
 
@@ -369,12 +370,46 @@ VALUES (2), (50);
 
 ### 2.5) SQL Syntax For Selecting / Viewing Data
 
+Here is a simple SQL `SELECT` query:
 
+```sql
+SELECT COLUMN1, COLUMN2 FROM example_table;
+```
 
+Let's break down the syntax:
 
+* The `SELECT` keyword tells SQL that we want to see data stored in the database
+* The next part, `COLUMN1, COLUMN2`, describes which columns we want to see
+* Finally, `FROM example_table` describes which table we want to see the data from
 
+The output of this SELECT query would be a table with 2 columns showing all rows in the table.
 
+```sql
+SELECT * FROM example_table;
+```
 
+### 2.6) Select (View) Data With SQL
+
+Try the following SELECT commands in the SQL input box below and see how the output changes:
+
+* `SELECT * from animals;`
+  * You should see all rows and all columns from the `animals` table
+* `SELECT SPECIES, ROOM_ID from animals;`
+  * Now you should only see what kinds of animals are in each room
+* `SELECT ID, NAME, SPECIES, ROOM_ID from animals;`
+  * This should see the *exact same* output as `SELECT * from animals;` because we've listed out all the possible columns
+
+<div class="sql-component">
+  <div>SQL Input</div>
+  <textarea rows="7"></textarea>
+  <br/>
+  <button class="run">Run</button>
+  <button class="reset" data-reset-id="5" title="">Restore Database To This Point</button>
+  <br/><br/>
+  <div>SQL Output:</div>
+  <div data-sql-result></div>
+  <br/><br/>
+</div>
 
 
 <br/><br/>
