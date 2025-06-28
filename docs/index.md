@@ -5,11 +5,12 @@ title: Home
 <script src="./src/main.js" defer></script>
 <script src="./src/home-script.js" defer></script>
 
-![](./src/assets/code-owls-banner-1.jpg)
 
 # Code With Cory
 
-Information about Software Engineering and coding by Cory Leigh Rahman: [LinkedIn](https://www.linkedin.com/in/corylr/), [Twitter](https://twitter.com/Cory_LR), [GitHub](https://github.com/CoryLR).
+Information about Software Engineering and coding by Cory Leigh Rahman.
+
+[LinkedIn](https://www.linkedin.com/in/corylr/), [Bluesky Social](https://corylr.bsky.social), [GitHub](https://github.com/CoryLR).
 
 Star the [CodeWithCory repository on GitHub](https://github.com/CoryLR/codewithcory). <span data-stars-message></span>
 
@@ -24,12 +25,13 @@ Star the [CodeWithCory repository on GitHub](https://github.com/CoryLR/codewithc
 
 ## Articles
 
-* [Popular Programming Paradigms Explained](./articles/popular-programming-paradigms-explained/index.md): Imperative vs. Declarative vs. Procedural vs. Object-Oriented (OOP) vs. Functional
+Read the Code With Cory articles at [codewithcory.com](https://codewithcory.com)
 
 
 ## Tutorials
 
 * [First Website](./tutorials/100-first-website/index.md): Build a Showcase Page
+* [Relational Databases & SQL](./tutorials/170-relational-database-sql/): Interactive exercises
 
 
 ## Recommended Resources
@@ -37,13 +39,13 @@ Star the [CodeWithCory repository on GitHub](https://github.com/CoryLR/codewithc
 * **100 Devs** is a great place for anyone to get started coding for free. You'll find both learning resources and community here.
   * Link: **[leonnoel.com/100devs](https://leonnoel.com/100devs/)**
 * **Resilient Coders**
-  * See if you're eligible to apply to this highly selective coding bootcamp (only available to certain cities): [resilientcoders.org/apply](https://www.resilientcoders.org/apply)
+  * See if you're eligible to apply to this highly selective coding bootcamp (only available in certain cities): [resilientcoders.org/apply](https://www.resilientcoders.org/apply)
   * Note: I volunteer as a Mentor for this amazing and impactful non-profit. If you're able, consider [donating](https://resilientcoders.org/donate) to Resilient Coders!
 
 
 ## About
 
-I started CodeWithCory.co to help teach my close friends about programming and post my personal recommendations for other places to keep learning. I've also started to add some of my personal tech writing under the Articles section. I hope it's helpful to you, dear reader, whoever you may be!
+I started Code With Cory to help teach friends and mentees about programming, and post my personal recommendations for other places to keep learning. I hope it's helpful to you, reader!
 
 -Cory
 
